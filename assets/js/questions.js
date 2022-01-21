@@ -11,7 +11,8 @@ let questions = [
       "",
       "",
       ""
-    ]
+    ],
+    image: ".//assets/images/alternator.jpg"
   },
     {
     numb: 2,
@@ -22,7 +23,8 @@ let questions = [
       "",
       "",
       ""
-    ]
+    ],
+    image:".//assets/images/clutchdisc.jpg"
   },
     {
     numb: 3,
@@ -33,7 +35,8 @@ let questions = [
       "",
       "",
       ""
-    ]
+    ],
+    image:".//assets/images/connectingrod.jpg"
   },
     {
     numb: 4,
@@ -44,7 +47,8 @@ let questions = [
       "",
       "",
       ""
-    ]
+    ],
+    image:".//assets/images/fuelinjectors.jpg"
   },
     {
     numb: 5,
@@ -55,7 +59,8 @@ let questions = [
       "",
       "",
       ""
-    ]
+    ],
+    image:".//assets/images/headgasket.jpg"
 },
 {
     numb: 6,
@@ -66,7 +71,8 @@ let questions = [
       "",
       "",
       ""
-    ]
+    ],
+    image:".//assets/images/sparkplug.jpg"
   },
     {
     numb: 7,
@@ -77,7 +83,8 @@ let questions = [
       "",
       "",
       ""
-    ]
+    ],
+    image:".//assets/images/swaybar.jpg"
   },
     {
     numb: 8,
@@ -88,7 +95,8 @@ let questions = [
       "",
       "",
       ""
-    ]
+    ],
+    image:".//assets/images/turbo.jpg"
   },
     {
     numb: 9,
@@ -99,7 +107,8 @@ let questions = [
       "",
       "",
       ""
-    ]
+    ],
+    image:".//assets/images/valves.jpeg"
   },
     {
     numb: 10,
@@ -110,7 +119,8 @@ let questions = [
       "",
       "",
       ""
-    ]
+    ],
+    image:".//assets/images/waterpump.jpg"
 },
 
 ]

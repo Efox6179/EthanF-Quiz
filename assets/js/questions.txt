@@ -1,0 +1,87 @@
+//these are the questions that will be referenced in the quiz with the correct answers and all of the choices 
+
+
+/*
+  {
+    "question": "What is the name of this car part?",
+    "choice1": "",
+    "choice2": "",
+    "choice3": "",
+    "choice4": "",
+    "answer": 
+  },
+  {
+    "question": "What is the name of this car part?",
+    "choice1": "",
+    "choice2": "",
+    "choice3": "",
+    "choice4": "",
+    "answer": 
+  },
+  {
+    "question": "What is the name of this car part?",
+    "choice1": "",
+    "choice2": "",
+    "choice3": "",
+    "choice4": "",
+    "answer": 
+  },
+  {
+    "question": "What is the name of this car part?",
+    "choice1": "",
+    "choice2": "",
+    "choice3": "",
+    "choice4": "",
+    "answer": 
+  },
+  {
+    "question": "What is the name of this car part?",
+    "choice1": "",
+    "choice2": "",
+    "choice3": "",
+    "choice4": "",
+    "answer": 
+  },
+  {
+    "question": "What is the name of this car part?",
+    "choice1": "",
+    "choice2": "",
+    "choice3": "",
+    "choice4": "",
+    "answer": 
+  },
+  {
+    "question": "What is the name of this car part?",
+    "choice1": "",
+    "choice2": "",
+    "choice3": "",
+    "choice4": "",
+    "answer": 
+  },
+  {
+    "question": "What is the name of this car part?",
+    "choice1": "",
+    "choice2": "",
+    "choice3": "",
+    "choice4": "",
+    "answer": 
+  },
+  {
+    "question": "What is the name of this car part?",
+    "choice1": "",
+    "choice2": "",
+    "choice3": "",
+    "choice4": "",
+    "answer": 
+  },
+  {
+    "question": "What is the name of this car part?",
+    "choice1": "",
+    "choice2": "",
+    "choice3": "",
+    "choice4": "",
+    "answer": 
+  }
+]
+
+*/

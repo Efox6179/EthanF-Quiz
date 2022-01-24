@@ -10,7 +10,7 @@ endScore.innerText = mostRecentScore;
 
 
 
-
+//this makes it so that you cannot submit a score to the leaderboard without entering a value into the initials box 
 initials.addEventListener('keyup', () => {
     
     saveScoreBtn.disabled = !initials.value;

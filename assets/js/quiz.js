@@ -12,7 +12,7 @@ let time = 60;
 
 
 let availableQuestions = [];
-
+//below are the questions that are in the questions.txt document
 let questions = [
     {
         
@@ -99,16 +99,18 @@ let questions = [
     ];
 
 
-
+//this is how many points will be added for each correct response 
 const CORRECT_BONUS = 10;
+//this is what is referenced if i decide to add more than 10 questions to the array in the future but only want the quiz to be 10 questions 
 const MAX_QUESTIONS = 10;
 
 startGame = () => {
     time = 60;
  
     score = 0;
+    //i found the spread syntax on w3 and it solved the problem  i was having with my old setup where all of my questions were listing on after aother 
     availableQuestions = [...questions];
-    
+    //this is my timer starting at 60 and when the timer is up it goes displays "finished" and goes to the results
     var timeleft = 60;
 var downloadTimer = setInterval(function(){
   if(timeleft <= 0){
@@ -127,6 +129,7 @@ var downloadTimer = setInterval(function(){
 };
 
 getNewQuestion = () => {
+    //this checks each time it calls for another question to see if theres still at least one yet if the array is out of questions it will go to the end page
 if(availableQuestions.length == 0){
     localStorage.setItem('mostRecentScore', score);
     return window.location.assign("../html/results.html");
@@ -141,6 +144,7 @@ question.innerText = currentQuestion.question;
 
 choices.forEach(choice => {
 const number = choice.dataset['number'];
+//this is how the code can tell the difference between the different choices in my questions.txt you can see each option has a number next to it 
 choice.innerText = currentQuestion['choice' + number];
 })
 
@@ -156,9 +160,9 @@ choices.forEach(choice => {
 acceptingAnswers = false;
 const selectedChoice = e.target;
 const selectedAnswer = selectedChoice.dataset['number'];
-
+//this applies the green and red background to the choices depending if it is correct or incorrect 
 const classToApply = selectedAnswer == currentQuestion.answer ? 'correct' : 'incorrect';
-
+//this applies the referenced correct bonus with a value of 10 points 
 if(classToApply == 'correct') {
     bonusScore(CORRECT_BONUS);
 }
@@ -178,7 +182,7 @@ getNewQuestion();
 
 });
 });
-
+//this adds the bonus score value to the current score changing as answers are correctly answered
 bonusScore = num => {
     score +=num;
     scoreText.innerText = score;

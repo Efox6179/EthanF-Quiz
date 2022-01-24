@@ -1,13 +1,16 @@
 const question = document.getElementById('question');
 const choices = Array.from(document.getElementsByClassName('choice-text'));
-const timeText = document.querySelector('time')
+const timeText = document.querySelector('timer')
 const scoreText = document.getElementById('score');
 
 
 let currentQuestion = {};
 let acceptingAnswers = false;
 let score = 0;
-let time = 0;
+
+let time = 60;
+
+
 let availableQuestions = [];
 
 let questions = [
@@ -101,16 +104,30 @@ const CORRECT_BONUS = 10;
 const MAX_QUESTIONS = 10;
 
 startGame = () => {
-    time = 0;
+    time = 60;
+ 
     score = 0;
     availableQuestions = [...questions];
     
+    var timeleft = 60;
+var downloadTimer = setInterval(function(){
+  if(timeleft <= 0){
+    clearInterval(downloadTimer);
+    document.getElementById("timer").innerHTML = "Finished";
+  
+    return window.location.assign("../html/results.html");
+    
+  } else {
+    document.getElementById("timer").innerHTML = timeleft ;
+  }
+  timeleft -= 1;
+}, 1000);
     
     getNewQuestion();
 };
 
 getNewQuestion = () => {
-if(availableQuestions.length == 0 ){
+if(availableQuestions.length == 0){
     localStorage.setItem('mostRecentScore', score);
     return window.location.assign("../html/results.html");
     

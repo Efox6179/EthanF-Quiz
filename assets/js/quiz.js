@@ -1,7 +1,8 @@
 const question = document.getElementById('question');
 const choices = Array.from(document.getElementsByClassName('choice-text'));
-const timetext = document.querySelector('time')
+const timeText = document.querySelector('time')
 const scoreText = document.getElementById('score');
+
 
 let currentQuestion = {};
 let acceptingAnswers = false;
@@ -23,7 +24,7 @@ let questions = [
       {
         "question": "What does Volkswagen mean?",
         "choice1": "Station Wagon",
-        "choice2": "The 'Peoples Car",
+        "choice2": "The Peoples Car",
         "choice3": "Beetle Wagon",
         "choice4": "Wagon",
         "answer": 2
@@ -104,14 +105,17 @@ startGame = () => {
     score = 0;
     availableQuestions = [...questions];
     
-    console.log(availableQuestions);
+    
     getNewQuestion();
 };
 
 getNewQuestion = () => {
-if(availableQuestions.length ===0 ){
-    return window.location.assign("../assets/html/results.html");
+if(availableQuestions.length == 0 ){
+    localStorage.setItem('mostRecentScore', score);
+    return window.location.assign("../html/results.html");
+    
 }
+
 
 const questionIndex = Math.floor(Math.random() * availableQuestions.length);
 currentQuestion = availableQuestions[questionIndex];
@@ -122,7 +126,7 @@ choices.forEach(choice => {
 const number = choice.dataset['number'];
 choice.innerText = currentQuestion['choice' + number];
 })
-//removes the question after its been used
+
 availableQuestions.splice(questionIndex, 1);
 
 acceptingAnswers = true;
@@ -135,10 +139,33 @@ choices.forEach(choice => {
 acceptingAnswers = false;
 const selectedChoice = e.target;
 const selectedAnswer = selectedChoice.dataset['number'];
-console.log(selectedAnswer);
+
+const classToApply = selectedAnswer == currentQuestion.answer ? 'correct' : 'incorrect';
+
+if(classToApply == 'correct') {
+    bonusScore(CORRECT_BONUS);
+}
+
+
+selectedChoice.parentElement.classList.add(classToApply);
+
+setTimeout( () => {
+
+    selectedChoice.parentElement.classList.remove(classToApply);
+
 getNewQuestion();
+
+}, 1000
+);
+
+
 });
 });
+
+bonusScore = num => {
+    score +=num;
+    scoreText.innerText = score;
+}
 
 startGame();
 

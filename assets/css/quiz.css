@@ -24,3 +24,16 @@
     padding: 1.5rem;
     width: 100%;
   }
+
+  .correct {
+      background-color: rgb(0, 194, 32);
+  }
+
+  .incorrect {
+      background-color: rgb(255, 0, 0);
+  }
+
+  #hud {
+display: flex;
+justify-content: space-between;
+  }
